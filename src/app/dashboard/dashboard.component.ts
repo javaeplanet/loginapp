@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  @Input() public isUserLoggedIn: boolean;
+   public isUserLoggedIn: boolean;
+  
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -15,9 +16,9 @@ export class DashboardComponent implements OnInit {
   }
 public onClick(){
   
-this.router.navigate(['/loginPage'])
+this.router.navigate([''])
 
-  
+  localStorage.removeItem('User');
   
 }
 }

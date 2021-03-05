@@ -12,13 +12,15 @@ export class LoginpageComponent implements OnInit {
    
 form:FormGroup; 
 hide=true;    
-user:any ={};                              
+user:any ={};     
+                         
   constructor(private build:FormBuilder, private router:Router) {
     this.form=this.build.group({
       email:['',Validators.required],
       password:['',Validators.required ]
     });
    }
+
 
   public onClick(){
      if(this.form.valid){
@@ -33,14 +35,9 @@ user:any ={};
    }
 
    addUser(user){
-let users=[];
-if(localStorage.getItem('Users')){
-users=JSON.parse(localStorage.getItem('Users'));
-users=[user, ...users];
-   }else{
-     users=[user];
-   }
-    localStorage.setItem('Users', JSON.stringify(users));
+
+
+localStorage.setItem('User',JSON.stringify(user));
    }
    ngOnInit(): void {
   }

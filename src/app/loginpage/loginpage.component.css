@@ -13,6 +13,7 @@
 
 }
 
+
 mat-card{
     max-width: 600px;
     margin: 2cm auto;
@@ -21,6 +22,7 @@ mat-card{
     color: brown;
     background-color: linen;
 }
+
 
 .header{
     text-align: center;

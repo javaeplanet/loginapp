@@ -4,9 +4,9 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 
 const routes: Routes = [
-  // {path:'',redirectTo:' ', pathMatch:'full'},
-  // {path:'', component:LoginpageComponent},
-  {path:'loginPage', component:LoginpageComponent},
+  
+  {path:'', component:LoginpageComponent},
+  
 
   {
     path:'displayDashboard',
