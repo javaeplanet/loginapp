@@ -1,0 +1,32 @@
+.loginControls{
+    /* width: 100%; */
+    padding: 10%;
+}
+
+.loginControls > *{
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+  
+
+
+}
+
+mat-card{
+    max-width: 600px;
+    margin: 2cm auto;
+    text-align: center;
+    max-height: 600px;
+    color: brown;
+    background-color: linen;
+}
+
+.header{
+    text-align: center;
+    color: whitesmoke;
+    justify-content: center;
+    font-size: 30px;
+    background-color:darkcyan;
+    font-style: inherit;
+    }

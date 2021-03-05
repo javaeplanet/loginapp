@@ -1,0 +1,8 @@
+.bar {
+    color: darkblue;
+    font-size: 500%;
+    background-color: darkseagreen;
+display: flex;
+justify-content: center;
+    
+}
