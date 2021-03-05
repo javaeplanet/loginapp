@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   }
 public onClick(){
   
-this.router.navigate([''])
+this.router.navigate(['/loginPage'])
 
   localStorage.removeItem('User');
   
