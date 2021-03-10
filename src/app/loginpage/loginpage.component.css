@@ -8,11 +8,8 @@
    
     display: flex;
     justify-content: center;
-  
-
 
 }
-
 
 mat-card{
     max-width: 600px;

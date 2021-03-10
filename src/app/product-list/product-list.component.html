@@ -1,0 +1,43 @@
+<div class="mat-elevation-z8">
+    <mat-toolbar color="primary"><b>Products - List</b></mat-toolbar>
+    <mat-table  [dataSource]="listData">
+      
+    <ng-container matColumnDef="productName">
+        <mat-header-cell *matHeaderCellDef><b>Product Name</b></mat-header-cell>
+        <mat-cell *matCellDef="let element">
+            {{element.productName}}
+        </mat-cell>
+
+    </ng-container>
+    <ng-container matColumnDef="productCost">
+        <mat-header-cell *matHeaderCellDef><b>Product Cost</b></mat-header-cell>
+        <mat-cell *matCellDef="let element">
+            {{element.productCost}}
+        </mat-cell>
+
+    </ng-container>
+    <ng-container matColumnDef="productDescription">
+        <mat-header-cell *matHeaderCellDef><b>Product Description</b></mat-header-cell>
+        <mat-cell *matCellDef="let element">
+            {{element.productDescription}}
+        </mat-cell>
+
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef><b></b></mat-header-cell>
+        <mat-cell *matCellDef="let row">
+            <button mat-icon-button (click)="onUpdate(row.productId)"  matTooltip="Edit">
+                <mat-icon>create</mat-icon>
+            </button>
+            <button mat-icon-button  (click)="onDelete(row.productId)"  color="warn"   matTooltip="delete">
+                <mat-icon>delete_outline</mat-icon>
+            </button>
+        </mat-cell>
+
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns">
+</mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+</mat-row>
+</mat-table>
+</div>

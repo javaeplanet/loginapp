@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-content>
+        <mat-toolbar class="logo">CREATE-PRODUCT</mat-toolbar>
+        <form [formGroup]="form" (submit)="onSubmit()" class="myForm">
+            <input type="hidden" formControlName="productId">
+            <mat-form-field appearance="outline" >
+                <mat-label>Product Name:</mat-label>
+                <input matInput placeholder="productName" formControlName="productName" required >
+                </mat-form-field>
+
+              <mat-form-field appearance="outline">
+              <mat-label>Product Cost:</mat-label>
+              <input matInput placeholder="productCost" formControlName="productCost" required >
+              </mat-form-field>
+
+            <mat-form-field appearance="outline">
+            <mat-label>Product Description:</mat-label>
+            <input matInput placeholder="productDescription" formControlName="productDescription" required >
+        </mat-form-field>
+           
+        <div>
+            <button mat-raised-button [disabled]="form.invalid"   color="primary" type="submit" >submit</button>
+        </div>
+
+        </form>
+        </mat-card-content>
+        </mat-card>

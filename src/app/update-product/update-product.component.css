@@ -1,0 +1,22 @@
+.myForm{
+    width: 100%;
+    padding: 5%;
+}
+.myForm > *{
+    width: 100%;
+}
+mat-card{
+    max-width: 600px;
+    margin: 2cm auto;
+    text-align: center;
+    max-height: 600px;
+    
+}
+.logo{
+    text-align: center;
+    color: white;
+    justify-content: center;
+    font-size: 30px;
+    background-color:blueviolet;
+    font-style: inherit;
+}
