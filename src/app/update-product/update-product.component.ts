@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
 
 import { ProductService } from './../product.service';
+
 
 @Component({
   selector: 'app-update-product',
@@ -13,7 +15,10 @@ import { ProductService } from './../product.service';
 export class UpdateProductComponent implements OnInit {
 form:FormGroup;
 
-  constructor(private build:FormBuilder) {
+
+productId:number;
+
+  constructor(private build:FormBuilder, private service:ProductService, private route: ActivatedRoute) {
 
     this.form=this.build.group({
       productId:['null'],
@@ -23,9 +28,13 @@ form:FormGroup;
     });
    }
 
-  ngOnInit() {
+
    
+
+  ngOnInit() {
+    // this.form.setValue(this.product);
   }
+
   
 
 }

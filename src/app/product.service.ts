@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { Router } from '@angular/router';
+
+
 
 
 @Injectable({
@@ -8,9 +9,10 @@ import { Router } from '@angular/router';
 })
 export class ProductService {
   productList:AngularFireList<any>;
+  
  
-  constructor(public fireBase :AngularFireDatabase, private router:Router) { 
-    
+  constructor(public fireBase :AngularFireDatabase, ) { 
+  
   }
   
  
@@ -20,6 +22,10 @@ export class ProductService {
 getProducts(){
   this.productList=this.fireBase.list('products');
   return this.productList.snapshotChanges();
+}
+
+getProductByProductId(productId:number){
+  return this.fireBase.object('products/'+productId);
 }
 
 createProduct(pdt){

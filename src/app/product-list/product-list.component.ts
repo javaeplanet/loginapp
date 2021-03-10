@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductService } from './../product.service';
-import { CreateProductComponent } from './../create-product/create-product.component';
+
 import { Router } from '@angular/router';
 
 
@@ -31,9 +31,10 @@ displayedColumns: string[]=['productName','productCost','productDescription','ac
       this.service.deleteProduct(productId);
     }
   }
-  onUpdate(productId){
+  onUpdate(row){
 
-this.router.navigate(['updateProduct',productId])
+ this.router.navigate(['updateProduct/productId'])
+
 
 // 
 
